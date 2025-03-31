@@ -1,59 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolo Delicioso</title>
+    <title>Modelos de Bolo</title>
     <style>
-        /* Estilos para o corpo da página */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
         }
-
-        /* Estilo para o título */
-        h1 {
-            color: #ff6347;
-            font-size: 3rem;
-        }
-
-        /* Estilo da imagem do bolo */
-        .bolo {
-            max-width: 300px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
-        }
-
-        /* Estilo do botão */
-        .comprar-bolo {
-            background-color: #ff6347;
+        header {
+            background-color: #2d3e50;
             color: white;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
         }
-
-        .comprar-bolo:hover {
-            background-color: #e55347;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .bolo {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .bolo img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .bolo h3 {
+            font-size: 1.2em;
+            margin: 15px 0 10px;
+        }
+        .bolo p {
+            font-size: 1em;
+            color: #333;
+        }
+        .bolo .preco {
+            font-size: 1.4em;
+            color: #E74C3C;
+            margin-bottom: 15px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Delicie-se com Nosso Bolo!</h1>
+<header>
+    <h1>Modelos de Bolo</h1>
+    <p>Escolha o seu bolo favorito!</p>
+</header>
 
-    <img src="https://example.com/imagem-de-bolo.jpg" alt="Bolo Delicioso" class="bolo">
-
-    <p>Esse é o bolo mais saboroso que você já viu! Não perca a chance de experimentá-lo.</p>
-
-    <button class="comprar-bolo">Comprar Agora</button>
+<div class="container">
+    <div class="bolo">
+        <img src="https://i.pinimg.com/736x/f4/4b/7f/f44b7f6838b5732201d11b86410f5aba.jpg" alt="Bolo de Chocolate">
+        <h3>Bolo de Chocolate</h3>
+        <p>Delicioso bolo de chocolate com cobertura cremosa.</p>
+        <p class="preco">R$ 80,00</p>
+    </div>
+    <div class="bolo">
+        <img src="https://th.bing.com/th/id/R.a1ff7fb8139de9cdc62fe8d9f737d8bb?rik=XQtK847TYKpLxQ&riu=http%3a%2f%2fi0.wp.com%2fwww.lesdelicesdemary.fr%2fwp-content%2fuploads%2f2019%2f05%2fDrip-cake-Kinder.jpg&ehk=wPdxtVctOpXqPznwkzuAcleZ4Hm1gNLiivpIpAEHUVM%3d&risl=&pid=ImgRaw&r=0" alt="Bolo de Morango">
+        <h3>Bolo de Morango</h3>
+        <p>Bolo leve e saboroso com cobertura de morango.</p>
+        <p class="preco">R$ 70,00</p>
+    </div>
+    <div class="bolo">
+        <img src="https://th.bing.com/th/id/OIP.py-i1vsfTfuH429XuyME1gHaJ4?w=1536&h=2048&rs=1&pid=ImgDetMain" alt="Bolo de Baunilha">
+        <h3>Bolo de Baunilha</h3>
+        <p>Bolo clássico de baunilha com recheio de creme.</p>
+        <p class="preco">R$ 75,00</p>
+    </div>
+    <div class="bolo">
+        <img src="https://www.festas.biz/wp-content/uploads/2020/02/bolo-de-aniversario-masculino-chocolate-1.jpg" alt="Bolo Red Velvet">
+        <h3>Bolo Red Velvet</h3>
+        <p>Bolo vermelhinho com creme de queijo delicioso.</p>
+        <p class="preco">R$ 90,00</p>
+    </div>
+</div>
 
 </body>
 </html>
