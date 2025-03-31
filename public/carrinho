@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Bolos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .produto {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .carrinho {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carrinho de Bolos</h1>
+    <div id="produtos">
+        <div class="produto">
+            <span>Bolo de Chocolate - R$ 50</span>
+            <button onclick="adicionarAoCarrinho('Bolo de Chocolate', 50)">Adicionar</button>
+        </div>
+        <div class="produto">
+            <span>Bolo de Morango - R$ 60</span>
+            <button onclick="adicionarAoCarrinho('Bolo de Morango', 60)">Adicionar</button>
+        </div>
+        <div class="produto">
+            <span>Bolo de Cenoura - R$ 40</span>
+            <button onclick="adicionarAoCarrinho('Bolo de Cenoura', 40)">Adicionar</button>
+        </div>
+    </div>
+    <div class="carrinho">
+        <h2>Seu Carrinho</h2>
+        <ul id="itensCarrinho"></ul>
+        <strong>Total: R$ <span id="total">0</span></strong>
+    </div>
+    <script>
+        const carrinho = [];
+        function adicionarAoCarrinho(nome, preco) {
+            carrinho.push({ nome, preco });
+            atualizarCarrinho();
+        }
+        function atualizarCarrinho() {
+            const lista = document.getElementById('itensCarrinho');
+            const total = document.getElementById('total');
+            lista.innerHTML = '';
+            let soma = 0;
+            carrinho.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nome} - R$ ${item.preco}`;
+                lista.appendChild(li);
+                soma += item.preco;
+            });
+            total.textContent = soma;
+        }
+    </script>
+</body>
+</html>
