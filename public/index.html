@@ -1,91 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modelos de Bolo</title>
+    <title>Login - Loja de Bolos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2d3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
+            background-color: #f8f1f1;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .bolo {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: 250px;
-            margin: 10px;
+        .login-container {
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
         }
-        .bolo img {
-            width: 100%;
-            height: auto;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
+        .login-container img {
+            width: 150px;
+            border-radius: 50%;
         }
-        .bolo h3 {
-            font-size: 1.2em;
-            margin: 15px 0 10px;
+        .login-container h1 {
+            font-size: 24px;
+            margin: 20px 0;
         }
-        .bolo p {
-            font-size: 1em;
-            color: #333;
+        .login-container input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        .bolo .preco {
-            font-size: 1.4em;
-            color: #E74C3C;
-            margin-bottom: 15px;
+        .login-container button {
+            padding: 10px 20px;
+            background-color: #e89c3e;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .login-container button:hover {
+            background-color: #c87d32;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Modelos de Bolo</h1>
-    <p>Escolha o seu bolo favorito!</p>
-</header>
-
-<div class="container">
-    <div class="bolo">
-        <img src="https://i.pinimg.com/736x/f4/4b/7f/f44b7f6838b5732201d11b86410f5aba.jpg" alt="Bolo de Chocolate">
-        <h3>Bolo de Chocolate</h3>
-        <p>Delicioso bolo de chocolate com cobertura cremosa.</p>
-        <p class="preco">R$ 80,00</p>
+    <div class="login-container">
+        <img src="https://i.pinimg.com/originals/2c/21/76/2c21765aa4449ff13735a4afd7f719f0.jpg" alt="Imagem de bolo">
+        <h1>Bem-vindo à Loja de Bolos</h1>
+        <form>
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Login</button>
+        </form>
     </div>
-    <div class="bolo">
-        <img src="https://th.bing.com/th/id/R.a1ff7fb8139de9cdc62fe8d9f737d8bb?rik=XQtK847TYKpLxQ&riu=http%3a%2f%2fi0.wp.com%2fwww.lesdelicesdemary.fr%2fwp-content%2fuploads%2f2019%2f05%2fDrip-cake-Kinder.jpg&ehk=wPdxtVctOpXqPznwkzuAcleZ4Hm1gNLiivpIpAEHUVM%3d&risl=&pid=ImgRaw&r=0" alt="Bolo de Morango">
-        <h3>Bolo de Morango</h3>
-        <p>Bolo leve e saboroso com cobertura de morango.</p>
-        <p class="preco">R$ 70,00</p>
-    </div>
-    <div class="bolo">
-        <img src="https://th.bing.com/th/id/OIP.py-i1vsfTfuH429XuyME1gHaJ4?w=1536&h=2048&rs=1&pid=ImgDetMain" alt="Bolo de Baunilha">
-        <h3>Bolo de Baunilha</h3>
-        <p>Bolo clássico de baunilha com recheio de creme.</p>
-        <p class="preco">R$ 75,00</p>
-    </div>
-    <div class="bolo">
-        <img src="https://www.festas.biz/wp-content/uploads/2020/02/bolo-de-aniversario-masculino-chocolate-1.jpg" alt="Bolo Red Velvet">
-        <h3>Bolo Red Velvet</h3>
-        <p>Bolo vermelhinho com creme de queijo delicioso.</p>
-        <p class="preco">R$ 90,00</p>
-    </div>
-</div>
-
 </body>
 </html>
