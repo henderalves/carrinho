@@ -1,66 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Bolos</title>
+    <title>Carrinho de Vendas de Bolos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
+            background-color: #f8f8f8;
+            text-align: center;
         }
         .produto {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 250px;
         }
-        .carrinho {
-            margin-top: 20px;
-            border-top: 1px solid #ccc;
-            padding-top: 10px;
+        .produto img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .produto h3 {
+            color: #333;
+        }
+        .produto p {
+            font-size: 18px;
+            color: #666;
+        }
+        .produto button {
+            padding: 10px 20px;
+            background-color: #ff6347;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .produto button:hover {
+            background-color: #e5533d;
         }
     </style>
 </head>
 <body>
-    <h1>Carrinho de Bolos</h1>
-    <div id="produtos">
-        <div class="produto">
-            <span>Bolo de Chocolate - R$ 50</span>
-            <button onclick="adicionarAoCarrinho('Bolo de Chocolate', 50)">Adicionar</button>
-        </div>
-        <div class="produto">
-            <span>Bolo de Morango - R$ 60</span>
-            <button onclick="adicionarAoCarrinho('Bolo de Morango', 60)">Adicionar</button>
-        </div>
-        <div class="produto">
-            <span>Bolo de Cenoura - R$ 40</span>
-            <button onclick="adicionarAoCarrinho('Bolo de Cenoura', 40)">Adicionar</button>
-        </div>
+    <h1>Carrinho de Vendas de Bolos</h1>
+    <div class="produto">
+        <img src="https://www.adornardecoracoesloja.com.br/wp-content/uploads/2017/04/locacao-de-bolo-cenografico-rosa-e-branco-4.jpg" alt="Bolo de Chocolate">
+        <h3>Bolo de Chocolate</h3>
+        <p>Preço: R$ 25,00</p>
+        <button>Comprar</button>
     </div>
-    <div class="carrinho">
-        <h2>Seu Carrinho</h2>
-        <ul id="itensCarrinho"></ul>
-        <strong>Total: R$ <span id="total">0</span></strong>
+    <div class="produto">
+        <img src="https://th.bing.com/th/id/R.e2725b7d44e05f10aef16583705b48d0?rik=Q91iBtlqlQpXZg&riu=http%3a%2f%2fwww.montandominhafesta.com.br%2fwp-content%2fuploads%2f2019%2f06%2f50815355_346055932669230_2391215916821682076_n-1024x1024.jpg&ehk=ev7U1nZllEGkyWhpfhv%2bKgJFiUZ65VWKGXRq%2bRlg85o%3d&risl=&pid=ImgRaw&r=0" alt="Bolo de Morango">
+        <h3>Bolo de Morango</h3>
+        <p>Preço: R$ 30,00</p>
+        <button>Comprar</button>
     </div>
-    <script>
-        const carrinho = [];
-        function adicionarAoCarrinho(nome, preco) {
-            carrinho.push({ nome, preco });
-            atualizarCarrinho();
-        }
-        function atualizarCarrinho() {
-            const lista = document.getElementById('itensCarrinho');
-            const total = document.getElementById('total');
-            lista.innerHTML = '';
-            let soma = 0;
-            carrinho.forEach(item => {
-                const li = document.createElement('li');
-                li.textContent = `${item.nome} - R$ ${item.preco}`;
-                lista.appendChild(li);
-                soma += item.preco;
-            });
-            total.textContent = soma;
-        }
-    </script>
+    <div class="produto">
+        <img src="https://i.pinimg.com/736x/f7/da/1d/f7da1d08a3c430068384a48b1d65f7e8.jpg" alt="Bolo de Limão">
+        <h3>Bolo de Limão</h3>
+        <p>Preço: R$ 27,00</p>
+        <button>Comprar</button>
+    </div>
 </body>
 </html>
